@@ -1,9 +1,10 @@
 <?php
 
 $paragraph = $_POST["paragraph"];
-$wordToReplace = strtolower($_POST["word"]);
+$wordToReplace = $_POST["word"];
 $wordToUse = '***';
-$paragaphCensored = str_replace($wordToReplace, $wordToUse, $paragraph);
+$paragaphCensored = str_replace(strtolower($wordToReplace), $wordToUse, strtolower($paragraph));
+$paragaphCensored = ucfirst($paragaphCensored);
 
 ?>
 
